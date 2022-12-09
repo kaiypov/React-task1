@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ColorSchemesExample from '../src/components/Navbar/Navbar';
+import DarkExample from './components/Main/Main';
+import Footer from './components/Footer/Footer';
 
-function App() {
+
+const App = () => {
+  const Users = [
+    {
+      name: "Soska",
+      lastName: "Uchiha",
+      age: 22,
+      id: 1,
+    },
+    {
+      name: "Naruto",
+      lastName: "Uzumaki",
+      age: 24,
+      id: 2,
+    },
+    {
+      name: "Sakura",
+      lastName: "Haruna",
+      age: 26,
+      id: 3,
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <ColorSchemesExample />
+     {Users.map((item) => {
+        return (
+          <DarkExample
+          name={item.name}
+            lastName={item.lastName}
+            age={item.age}
+            id={item.id}
+          />
+        );
+      })}
+
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

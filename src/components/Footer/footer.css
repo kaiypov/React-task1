@@ -1,0 +1,14 @@
+.abc {
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.page-footer{
+    background: rgb(76,119,134);
+background: linear-gradient(90deg, rgba(76,119,134,1) 100%, rgba(223,232,235,1) 100%, rgba(244,9,9,1) 100%, rgba(62,77,73,1) 100%);
+}
+#footer1 {
+    height: 300px;
+}
